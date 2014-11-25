@@ -21,4 +21,9 @@ object Homework_exercises_ch1 {
   DenseVector(-1, 2) + DenseVector(-3, -2) + DenseVector(1, 2)
                                                   //> res3: breeze.linalg.DenseVector[Int] = DenseVector(-3, 2)
   DenseVector(1,2,3) + DenseVector.zeros[Int](3)  //> res4: breeze.linalg.DenseVector[Int] = DenseVector(1, 2, 3)
+
+	// 1.3.3.1
+	DenseVector(-1,2) + DenseVector(-1,2) + DenseVector(-1,2)
+                                                  //> res5: breeze.linalg.DenseVector[Int] = DenseVector(-3, 6)
+  DenseVector(-1,2) * 3                           //> res6: breeze.linalg.DenseVector[Int] = DenseVector(-3, 6)
 }

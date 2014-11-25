@@ -52,9 +52,9 @@ object vect_lab_1 {
   x1 * 2                                          //> res18: breeze.linalg.DenseVector[Int] = DenseVector(2, 4)
   
   val x11 = DenseVector(4.0, -3.0)                //> x11  : breeze.linalg.DenseVector[Double] = DenseVector(4.0, -3.0)
-  x11 + x11                                       //> Nov 24, 2014 5:57:09 PM com.github.fommil.jni.JniLoader liberalLoad
+  x11 + x11                                       //> Nov 24, 2014 7:26:04 PM com.github.fommil.jni.JniLoader liberalLoad
                                                   //| INFO: successfully loaded /var/folders/qk/q84p77h56y371pyw0vp69j1h0000gn/T/j
-                                                  //| niloader6369522717610839709netlib-native_system-osx-x86_64.jnilib
+                                                  //| niloader298537842172522023netlib-native_system-osx-x86_64.jnilib
                                                   //| res19: breeze.linalg.DenseVector[Double] = DenseVector(8.0, -6.0)
   val alpha = -(1.0/2)                            //> alpha  : Double = -0.5
   val y = x11 * alpha                             //> y  : breeze.linalg.DenseVector[Double] = DenseVector(-2.0, 1.5)
@@ -74,4 +74,8 @@ object vect_lab_1 {
   x14 - x13                                       //> res27: breeze.linalg.DenseVector[Int] = DenseVector(-2, 5)
   x14 - x14                                       //> res28: breeze.linalg.DenseVector[Int] = DenseVector(0, 0)
   x1 - x1                                         //> res29: breeze.linalg.DenseVector[Int] = DenseVector(0, 0)
+  
+  x5                                              //> res30: breeze.linalg.DenseVector[Int] = DenseVector(4, 2, 5)
+  x6                                              //> res31: breeze.linalg.DenseVector[Int] = DenseVector(1, 2, 4)
+  val x15 = x5 + x6                               //> x15  : breeze.linalg.DenseVector[Int] = DenseVector(5, 4, 9)
 }
