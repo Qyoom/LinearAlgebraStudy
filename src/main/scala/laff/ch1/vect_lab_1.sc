@@ -52,9 +52,9 @@ object vect_lab_1 {
   x1 * 2                                          //> res18: breeze.linalg.DenseVector[Int] = DenseVector(2, 4)
   
   val x11 = DenseVector(4.0, -3.0)                //> x11  : breeze.linalg.DenseVector[Double] = DenseVector(4.0, -3.0)
-  x11 + x11                                       //> Nov 24, 2014 7:26:04 PM com.github.fommil.jni.JniLoader liberalLoad
+  x11 + x11                                       //> Nov 25, 2014 2:09:56 PM com.github.fommil.jni.JniLoader liberalLoad
                                                   //| INFO: successfully loaded /var/folders/qk/q84p77h56y371pyw0vp69j1h0000gn/T/j
-                                                  //| niloader298537842172522023netlib-native_system-osx-x86_64.jnilib
+                                                  //| niloader8704467823575439455netlib-native_system-osx-x86_64.jnilib
                                                   //| res19: breeze.linalg.DenseVector[Double] = DenseVector(8.0, -6.0)
   val alpha = -(1.0/2)                            //> alpha  : Double = -0.5
   val y = x11 * alpha                             //> y  : breeze.linalg.DenseVector[Double] = DenseVector(-2.0, 1.5)
@@ -78,4 +78,25 @@ object vect_lab_1 {
   x5                                              //> res30: breeze.linalg.DenseVector[Int] = DenseVector(4, 2, 5)
   x6                                              //> res31: breeze.linalg.DenseVector[Int] = DenseVector(1, 2, 4)
   val x15 = x5 + x6                               //> x15  : breeze.linalg.DenseVector[Int] = DenseVector(5, 4, 9)
+  
+  // -------- Product ----------------------------- //
+  
+  val v1 = DenseVector(3,5,7,2,8,3)               //> v1  : breeze.linalg.DenseVector[Int] = DenseVector(3, 5, 7, 2, 8, 3)
+  val v2 = DenseVector(2,4,3,7,9,1)               //> v2  : breeze.linalg.DenseVector[Int] = DenseVector(2, 4, 3, 7, 9, 1)
+  val v3 = DenseVector(3,4,2)                     //> v3  : breeze.linalg.DenseVector[Int] = DenseVector(3, 4, 2)
+  
+  // element-wise multiplication
+  val prod1 = v1 :* v2                            //> prod1  : breeze.linalg.DenseVector[Int] = DenseVector(6, 20, 21, 14, 72, 3)
+                                                  //| 
+  prod1.sum                                       //> res32: Int = 136
+  
+  // dot product
+  val prod4 = v1 dot v2                           //> prod4  : Int = 136
+  
+  //val prod5 = v1.t dot v2 error
+  
+  // Error if lengths don't match
+  //val prod2 = v1:*v3 // error
+  //val prod3 = v1 dot v3 // error
+  //v1.t * v3 // error
 }
